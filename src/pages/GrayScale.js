@@ -10,7 +10,6 @@ export default function GrayScale() {
 
   const [imageSrc, setImageSrc] = useState(null);
   const [hasProcessed, setHasProcessed] = useState(false);
-  const [detectionType, setDetectionType] = useState("Image To GrayScale");
   const [colorScale, setColor] = useState(50); // 1–100
 
 
