@@ -1,0 +1,191 @@
+/* Main Container */
+.image-blur-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #06070d 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+/* Header */
+.tool-header {
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.tool-header h1 {
+    font-family: 'Georgia', serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.tool-header p {
+  font-size: 1.2rem;
+}
+
+/* Back Button */
+.back-button {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Content */
+.tool-content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Upload Controls */
+.image-blur-container .upload-controls {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.image-blur-container .upload-controls .custom-file-upload{
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: rgb(16, 1, 1);
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: 'Roboto', sans-serif;
+}
+
+.image-blur-container .upload-controls .custom-file-upload:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Blur Controls */
+.blur-controls {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.blur-controls label {
+  font-weight: 600;
+  color: #333;
+}
+
+.blur-controls input[type="number"] {
+  padding: 10px 15px;
+  border: 2px solid #667eea;
+  border-radius: 6px;
+  width: 120px;
+}
+
+/* Go Button */
+.image-blur-container .upload-controls .blur-controls .go-button {
+  background: #58d2ab;
+  color: black;
+  border: none;
+  padding: 12px 40px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1.5rem;
+  font-family: 'Courier New', monospace;
+}
+
+.go-button:hover:not(:disabled) {
+  background: #059669;
+}
+
+.go-button:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Images Container */
+.images-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+/* Image Box */
+.image-blur-container .images-container .image-box {
+  background: rgb(9, 1, 1);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.image-box h3 {
+  color: #667eea;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.image-box canvas {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Download Button */
+.image-blur-container .image-box .download-button {
+  background: #b6c0e1;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.download-button:hover:not(:disabled) {
+  background: #764ba2;
+}
+
+.download-button:disabled {
+  background: #d1d5db;
+  color: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .back-button {
+    position: static;
+    margin-bottom: 20px;
+  }
+  
+  .images-container {
+    grid-template-columns: 1fr;
+  }
+}
