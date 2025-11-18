@@ -33,6 +33,9 @@ const Home = () => {
             <div className="tool-icon">⚪⚫</div>
             <h3>Gray Scale</h3>
             <p>Apply a grey scale to an image</p>
+            <button className="tool-button">Open Tool</button>
+            </div>
+
           <div className="tool-card" onClick={() => navigate('/sharpening')}>
             <div className="tool-icon">✏️</div>
             <h3>Sharpening</h3>
