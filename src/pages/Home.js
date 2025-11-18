@@ -14,6 +14,7 @@ const Home = () => {
 
       <section className="tools-section">
         <h2>Select a Tool</h2>
+        
         <div className="tools-grid">
           <div className="tool-card" onClick={() => navigate('/blur')}>
             <div className="tool-icon">🔲</div>
@@ -26,6 +27,13 @@ const Home = () => {
             <div className="tool-icon">📐</div>
             <h3>Edge Detection</h3>
             <p>Detect edges using 1D or 2D convolution operators</p>
+            <button className="tool-button">Open Tool</button>
+          </div>
+
+           <div className="tool-card" onClick={() => navigate('/gray-scale')}>
+            <div className="tool-icon">⚪⚫</div>
+            <h3>Gray Scale</h3>
+            <p>Apply a grey scale to an image</p>
             <button className="tool-button">Open Tool</button>
           </div>
         </div>
