@@ -6,6 +6,7 @@ import EdgeDetection from './pages/EdgeDetection';
 import GreyScale from './pages/GrayScale'
 
 import './App.css';
+import Sharpening from './pages/Sharpening';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/blur" element={<ImageBlur />} />
           <Route path="/edge-detection" element={<EdgeDetection />} />
           <Route path="/gray-scale" element={<GreyScale />} />
+          <Route path="/Sharpening" element={<Sharpening />} />
         </Routes>
       </div>
     </Router>
