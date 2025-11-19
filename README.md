@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Project Title:
+Web Based Image Processor
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Hosted Link To Access site:
+https://filterforfun.netlify.app/
 
-## Available Scripts
+# Application Description
+This Application allows you upload an image of your choosing
+and run it through several filtering techniques, such as bluring
+an image, or grayscaling. You are able to use a slider to intensify
+the scaling of the filter. You are also able to download the processeed
+image! This is for anyone to use as they please. 
 
-In the project directory, you can run:
+# Features 
+We have  implemented the ability to upload and download images!
+alongside applying the following image processing techniques:
+ - Image Blur
+ - Edge Detection
+ - Gray Scale
+ - Sharpening
 
-### `npm start`
+# Technologies & Dependencies / Languages & Libraries
+We are using the following Technologies:
+- React
+- JavaScript
+- CSS
+- Netlify
+  
+The following dependancies were used:
+- bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
+- npm install react-dom
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Setup Instructions locally
+ - git clone https://github.com/Solarific/ImageProcessor.git
+ - Enter the directory folder you cloned it into
+ - npm install react-dom
+ - npm start
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#File Structure
+- Public
+- Src
+   - App.js/css
+   - Index.js/css
+   - pages
+       - Home.js/cs
+       - EdgeDetection.js/cs
+       - GrayScale.js/cs
+       - ImageBlur.js.cs
+       - Sharpening.js.cs
+     
+#Key files/folders and their purpose
+ - The key Files within our structure is all contained  within the 'src/' file.
+ - Within that file is a 'pages'folder that contains the entire project.
+ - Within is all the applicable filters alongside their js/css variants.
+ - The Home page is what allows the user to navigate the webpageto seperate tools 
