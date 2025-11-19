@@ -36,7 +36,7 @@ The following dependancies were used:
  - npm install react-dom
  - npm start
 
-#File Structure
+# File Structure
 - Public
 - Src
    - App.js/css
@@ -48,7 +48,7 @@ The following dependancies were used:
        - ImageBlur.js.cs
        - Sharpening.js.cs
      
-#Key files/folders and their purpose
+# Key files/folders and their purpose
  - The key Files within our structure is all contained  within the 'src/' file.
  - Within that file is a 'pages'folder that contains the entire project.
  - Within is all the applicable filters alongside their js/css variants.
