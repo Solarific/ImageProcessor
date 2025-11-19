@@ -1,5 +1,4 @@
-# Project Title:
-Web Based Image Processor
+# Project Title: Web Based Image Processor
 
 # Hosted Link To Access site:
 https://filterforfun.netlify.app/
