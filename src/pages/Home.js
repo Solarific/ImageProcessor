@@ -30,9 +30,9 @@ const Home = () => {
             <button className="tool-button">Open Tool</button>
           </div>
           <div className="tool-card" onClick={() => navigate('/brightness')}>
-            <div className="tool-icon">✏️</div>
+            <div className="tool-icon">☀️</div>
             <h3>Brightness</h3>
-            <p>Brighten images</p>
+            <p>Brighten images!</p>
             <button className="tool-button">Open Tool</button>
           </div>
           <div className="tool-card" onClick={() => navigate('/gray-scale')}>
