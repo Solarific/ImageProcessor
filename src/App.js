@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import ImageBlur from './pages/ImageBlur';
 import EdgeDetection from './pages/EdgeDetection';
 import GreyScale from './pages/GrayScale'
+import Contrast from './pages/Contrast';
 import Brightness from './pages/Brightness';
 
 import './App.css';
@@ -20,6 +21,8 @@ function App() {
           <Route path="/Brightness" element={<Brightness />} />
           <Route path="/gray-scale" element={<GreyScale />} />
           <Route path="/Sharpening" element={<Sharpening />} />
+          <Route path="/Contrast" element={<Contrast />} />
+
         </Routes>
       </div>
     </Router>

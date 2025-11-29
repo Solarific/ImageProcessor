@@ -48,6 +48,13 @@ const Home = () => {
             <p>Sharpen images using convolution operators</p>
             <button className="tool-button">Open Tool</button>
           </div>
+
+          <div className="tool-card" onClick={() => navigate('/contrast')}>
+            <div className="tool-icon">🌓</div>
+            <h3>Contrast</h3>
+            <p>Adjust the contrast of an image</p>
+            <button className="tool-button">Open Tool</button>
+          </div>
         </div>
       </section>
 
