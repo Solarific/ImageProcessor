@@ -17,6 +17,7 @@ alongside applying the following image processing techniques:
  - Edge Detection
  - Gray Scale
  - Sharpening
+ - Brightness
 
 # Technologies & Dependencies / Languages & Libraries
 We are using the following Technologies:
@@ -44,8 +45,9 @@ The following dependancies were used:
        - Home.js/cs
        - EdgeDetection.js/cs
        - GrayScale.js/cs
-       - ImageBlur.js.cs
-       - Sharpening.js.cs
+       - ImageBlur.js/cs
+       - Sharpening.js/cs
+       - Sharpening.js/css
      
 # Key files/folders and their purpose
  - The key Files within our structure is all contained  within the 'src/' file.
