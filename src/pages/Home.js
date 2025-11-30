@@ -29,12 +29,14 @@ const Home = () => {
             <p>Detect edges using 1D or 2D convolution operators</p>
             <button className="tool-button">Open Tool</button>
           </div>
+
           <div className="tool-card" onClick={() => navigate('/brightness')}>
             <div className="tool-icon">☀️</div>
             <h3>Brightness</h3>
             <p>Brighten images!</p>
             <button className="tool-button">Open Tool</button>
           </div>
+
           <div className="tool-card" onClick={() => navigate('/gray-scale')}>
             <div className="tool-icon">⚪⚫</div>
             <h3>Gray Scale</h3>
@@ -53,6 +55,13 @@ const Home = () => {
             <div className="tool-icon">🌓</div>
             <h3>Contrast</h3>
             <p>Adjust the contrast of an image</p>
+            <button className="tool-button">Open Tool</button>
+          </div>
+
+          <div className="tool-card" onClick={() => navigate('/posterize')}>
+            <div className="tool-icon">🌓</div>
+            <h3>Posterize</h3>
+            <p>Make an image into a poster.</p>
             <button className="tool-button">Open Tool</button>
           </div>
         </div>
