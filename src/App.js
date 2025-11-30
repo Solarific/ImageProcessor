@@ -6,6 +6,7 @@ import EdgeDetection from './pages/EdgeDetection';
 import GreyScale from './pages/GrayScale'
 import Contrast from './pages/Contrast';
 import Brightness from './pages/Brightness';
+import Posterize from './pages/Posterize';
 
 import './App.css';
 import Sharpening from './pages/Sharpening';
@@ -22,7 +23,7 @@ function App() {
           <Route path="/gray-scale" element={<GreyScale />} />
           <Route path="/Sharpening" element={<Sharpening />} />
           <Route path="/Contrast" element={<Contrast />} />
-
+          <Route path="/posterize" element={<Posterize />} />
         </Routes>
       </div>
     </Router>
