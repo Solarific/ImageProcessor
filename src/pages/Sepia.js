@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Posterize.css";
+import "./Sepia.css";
 
-export default function Posterize() {
+export default function Sepia() {
     const navigate = useNavigate();
 
     const originalCanvasRef = useRef(null);
@@ -10,7 +10,7 @@ export default function Posterize() {
 
     const [imageSrc, setImageSrc] = useState(null);
     const [hasProcessed, setHasProcessed] = useState(false);
-    //const [brightenPct, setBrightenPct] = useState(0); // -100 to 100
+    const [sepiaPct, setSepiaPct] = useState(0); // 0-100
 
     const MAX_W = 800;
     const MAX_H = 600;
@@ -29,6 +29,16 @@ export default function Posterize() {
         ctx.drawImage(img, 0, 0, width, height);
     };
 
+       const clampSepia = (n) => {
+        if (Number.isNaN(n) || n < 1) return 1;
+        if (n > 100) return 100;
+        return n;
+    };
+
+        const handleSepiaInput = (e) => {
+        const v = clampSepia(parseInt(e.target.value, 10));
+        setSepiaPct(v);
+    };
 
     // ---------- Actions ----------
     const handleImageUpload = (e) => {
@@ -67,38 +77,25 @@ export default function Posterize() {
         const height = srcCanvas.height;
 
         const outData = new ImageData(width, height);
-        for (let i = 0, j = 0; i < srcData.data.length; i += 4, j++) {
-            // get brightness value
-            // r + g + b / 3
-            const brightness = (srcData.data[i] + srcData.data[i + 1] + srcData.data[i + 2]) / 3;
+        for (let i = 0; i < srcData.data.length; i += 4) {
+            const t = sepiaPct / 100;
+            const r = srcData.data[i];
+            const g = srcData.data[i + 1];
+            const b = srcData.data[i + 2];
 
-            if (brightness === 0) {
-                outData.data[i] = 0;
-                outData.data[i + 1] = 0;
-                outData.data[i + 2] = 0;
-            }
-            else if (brightness <= 92) {
-                outData.data[i] = 102;
-                outData.data[i + 1] = 0;
-                outData.data[i + 2] = 102;
-            }
-            else if (brightness <= 135) {
-                outData.data[i] = 0;
-                outData.data[i + 1] = 128;
-                outData.data[i + 2] = 255;
-            }
-            else if (brightness <= 180) {
-                outData.data[i] = 178;
-                outData.data[i + 1] = 255;
-                outData.data[i + 2] = 102;
-            }
-            else {
-                outData.data[i] = 255;
-                outData.data[i + 1] = 205;
-                outData.data[i + 2] = 205;
-            }
+        // Reference: https://stackoverflow.com/questions/1061093/how-is-a-sepia-tone-created
+            let or = 0.393 * r + 0.769 * g + 0.189 * b;
+            let og = 0.349 * r + 0.686 * g + 0.168 * b;
+            let ob = 0.272 * r + 0.534 * g + 0.131 * b; 
+
+            or = Math.min(255, Math.max(0, or));
+            og = Math.min(255, Math.max(0, og));
+            ob = Math.min(255, Math.max(0, ob)); 
+            outData.data[i]     = r * (1-t) + or * t;
+            outData.data[i + 1] = g * (1-t) + og * t;
+            outData.data[i + 2] = b * (1-t) + ob * t;
             outData.data[i + 3] = 255;
-        }
+}
 
         dctx.putImageData(outData, 0, 0);
         setHasProcessed(true);
@@ -112,7 +109,7 @@ export default function Posterize() {
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement("a");
                 a.href = url;
-                a.download = "posterized-image.png";
+                a.download = "sepia-image.png";
                 a.click();
                 URL.revokeObjectURL(url);
             });
@@ -120,7 +117,7 @@ export default function Posterize() {
             const url = canvas.toDataURL("image/png");
             const a = document.createElement("a");
             a.href = url;
-            a.download = "posterize-image.png";
+            a.download = "sepia-image.png";
             a.click();
         }
     };
@@ -146,7 +143,7 @@ export default function Posterize() {
     }, [imageSrc]);
 
     return (
-        <div className="posterize-container">
+        <div className="sepia-container">
             <header className="tool-header">
                 <button className="back-button" onClick={() => navigate("/")}>
                     ← Back to Home
@@ -166,6 +163,17 @@ export default function Posterize() {
                         accept="image/*"
                         onChange={handleImageUpload}
                     />
+                                                <div className="sepia-controls">
+                                <label htmlFor="sepia-input">Sepia Intensity: {sepiaPct}%  </label>
+                                <input
+                                    id="sepia-input"
+                                    type="range"
+                                    min="0"
+                                    max="100"
+                                    value={sepiaPct}
+                                    onChange={handleSepiaInput}
+                                />
+                            </div>
                     <button className="go-button" onClick={handleGo} disabled={!imageSrc}>
                         Go
                     </button>
