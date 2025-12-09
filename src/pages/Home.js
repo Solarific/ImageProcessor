@@ -64,6 +64,13 @@ const Home = () => {
             <p>Make an image into a poster.</p>
             <button className="tool-button">Open Tool</button>
           </div>
+
+                    <div className="tool-card" onClick={() => navigate('/sepia')}>
+            <div className="tool-icon">🌓</div>
+            <h3>Sepia</h3>
+            <p>Apply a sepia tone to an image</p>
+            <button className="tool-button">Open Tool</button>
+          </div>
         </div>
       </section>
 

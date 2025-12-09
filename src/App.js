@@ -7,6 +7,7 @@ import GreyScale from './pages/GrayScale'
 import Contrast from './pages/Contrast';
 import Brightness from './pages/Brightness';
 import Posterize from './pages/Posterize';
+import Sepia from './pages/Sepia';
 
 import './App.css';
 import Sharpening from './pages/Sharpening';
@@ -24,6 +25,7 @@ function App() {
           <Route path="/Sharpening" element={<Sharpening />} />
           <Route path="/Contrast" element={<Contrast />} />
           <Route path="/posterize" element={<Posterize />} />
+          <Route path="/sepia" element={<Sepia />} />
         </Routes>
       </div>
     </Router>
