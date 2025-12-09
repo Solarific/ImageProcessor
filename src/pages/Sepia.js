@@ -90,7 +90,8 @@ export default function Sepia() {
 
             or = Math.min(255, Math.max(0, or));
             og = Math.min(255, Math.max(0, og));
-            ob = Math.min(255, Math.max(0, ob)); 
+            ob = Math.min(255, Math.max(0, ob));
+             
             outData.data[i]     = r * (1-t) + or * t;
             outData.data[i + 1] = g * (1-t) + og * t;
             outData.data[i + 2] = b * (1-t) + ob * t;
@@ -148,8 +149,8 @@ export default function Sepia() {
                 <button className="back-button" onClick={() => navigate("/")}>
                     ← Back to Home
                 </button>
-                <h1>Posterization Tool</h1>
-                <p>Make an image look like a poster.</p>
+                <h1>Sepia Tool</h1>
+                <p>Make an image have a sepia-tone.</p>
             </header>
 
             <div className="tool-content">
