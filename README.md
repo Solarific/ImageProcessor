@@ -18,6 +18,9 @@ alongside applying the following image processing techniques:
  - Gray Scale
  - Sharpening
  - Brightness
+ - Sepia
+ - Posterize
+ - Contrast
 
 # Technologies & Dependencies / Languages & Libraries
 We are using the following Technologies:
@@ -43,11 +46,13 @@ The following dependancies were used:
    - Index.js/css
    - pages
        - Home.js/cs
-       - EdgeDetection.js/cs
-       - GrayScale.js/cs
-       - ImageBlur.js/cs
-       - Sharpening.js/cs
+       - EdgeDetection.js/css
+       - GrayScale.js/css
+       - ImageBlur.js/css
        - Sharpening.js/css
+       - Contrast.js/css
+       - Sepia.js/css
+       - Posterize.js/css
      
 # Key files/folders and their purpose
  - The key Files within our structure is all contained  within the 'src/' file.
